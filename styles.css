@@ -12,16 +12,18 @@
     --default-font-family: 'GN-sans', sans-serif;
     --default-font-color: #440500;
     --headings-font-family: 'GN-script', serif;
-    --headings-font-color: #440500;
+    --headings-font-color: #F2E8CF;
     --pergamena-color: #E9E1DA;
     --pino-color: #92C1A0;
     --foglia-color: #B9C9B4;
+    --crema-color: #F2E8CF;
+    --moro-color: #440500;
 }
 
 body {
     font-family: var(--default-font-family);
     color: var(--default-font-color);
-    background-image: url(/img/pergamena.png);
+    background: var(--foglia-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -123,10 +125,10 @@ footer .social-links a:hover {
 }
 
 .hero {
-    background-image: url(/img/1.png);
+    background-image: url(/img/107-muted-fiori.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: bottom;
+    background-position-y: center;
     text-align: center;
     padding: 100px 20px;
 }
@@ -141,18 +143,24 @@ footer .social-links a:hover {
     font-weight: normal;
     line-height: 2.5;
 }
+ .buttons {
+    margin-top: 5em;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+ }
 
-.hero p {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0;
-}
+ .buttons a {
+    color: var(--moro-color);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+ }
 
-.hero .bio {
-    max-width: 80%;
-    margin: 0 auto;
-    line-height: 2;
-}
+ .buttons a:hover {
+    text-decoration: overline;
+    transition: ease-in-out 400ms;
+ }
 
 .btn-branding {
     background-color: var(--branding-color);
