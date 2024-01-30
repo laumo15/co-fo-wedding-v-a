@@ -55,8 +55,90 @@ p {
     line-height: 30px;
 }
 
+form {
+    line-height: 45px;
+}
+
+input {
+    font-size: 18px;
+    margin: 15px auto;
+    background-color: var(--crema-color);
+    border: #440500 1px solid;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+select {
+    font-size: 18px;
+    color: grey;
+    height: 49px;
+    background-color: var(--crema-color);
+    border: #440500 1px solid;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+textarea {
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: var(--crema-color);
+    border: #440500 1px solid;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+.ml{
+    margin-left: 10px;
+}
+
+.invia {
+    min-width: 120px;
+
+}
+
+.calendar-popup {
+    position: absolute;
+    top: 0;
+    left: 38%;
+    max-width: 30%;
+    padding: 1.5rem 3rem 3.5rem;
+    background-color: var(--crema-color);
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    visibility: hidden;
+}
+
+.calendar-popup h4{
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "GN-sans";
+}
+
+.closer {
+    justify-content: end;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.closer:hover{
+    cursor: pointer;
+}
+
+.visibility-inherit {
+    visibility: inherit !important;
+}
+
+.open-popup {
+    transition: ease-in-out 300ms;
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50% -50%) scale(1);
+}
+
 nav {
     padding: 20px;
+    font-size: 18px;
 }
 
 nav ul {
@@ -74,11 +156,11 @@ nav a {
     text-decoration: none;
     margin-left: 15px;
     color: var(--default-font-color);
-    transition: all 100ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
 nav a:hover, nav li.active a {
-    color: var(--branding-color);
+    text-decoration: underline;
 }
 
 footer {
@@ -177,8 +259,8 @@ footer .social-links a:hover {
     background-color: var(--crema-color);
     padding: 15px 20px;
     text-decoration: none;
+    border: 1px solid var(--moro-color);
     border-radius: 5px;
-    box-shadow: var(--moro-color) 1px 1px 1px;
  }
 
 .btn-branding {

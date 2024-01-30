@@ -20,12 +20,13 @@
         <nav class="d-flex justify-content-between">
             <a href="/" title="Homepage">
                 <img src="images/logo.png" class="logo d-none d-md-block" alt="Co&Fo logo"/>
-                <img src="images/logo-small.png" class="logo d-block d-md-none" alt="Laura Morelli logo small"/>
+                <img src="images/logo-small.png" class="logo d-block d-md-none" alt="logo small"/>
             </a>
             <ul>
-                <li class="active"><a href="/" title="Homepage">Home</a></li>
-                <li><a href="/e-poi.html" title="Un giorno speciale">Un giorno speciale</a></li>
-                <li><a href="/rsvp.html" title="RSVP">RSVP</a></li>
+                <li><a href="/index.html" title="Homepage">Home</a></li>
+                <li><a href="/giorno-speciale.html" title="RSVP">Un giorno speciale</a></li>
+                <li class="active"><a href="/" title="RSVP">RSVP</a></li>
+                <li><a href="/e-poi.html" title="... e poi?">.... e poi?</a></li>
             </ul>
         </nav>
     </div>
@@ -36,25 +37,35 @@
             </div>
             <div class="col-lg-6">
                 <div class="content">
-                    <h1>Vi aspettiamo</h1>
+                    <h1>Vi aspettiamo!</h1>
                     <h2 class="mb-5 mt-5">È gradita gentile conferma entro il 30 giugno 2024.</h2>
                     <form id="form">
                         <input placeholder="Nome">
                         <input placeholder="Cognome">
-                        <input placeholder="Menù">
+                        <select>
+                            <option value="" disabled selected>Menù</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Vegetariano">Vegetariano</option>
+                            <option value="Vegano">Vegano</option>
+                            <option value="Senza lattosio">Senza lattosio</option>
+                            <option value="Senza glutine">Senza glutine</option>
+                        </select>
+                        <br>
                         Per quanti ospiti stai confermando, oltre a te?
-                        <select id="ospiti">
-                            <option value = "Nessuno"></option>
-                            <option value = 1></option>
-                            <option value = 2></option>
-                            <option value = 3></option>
-                            <option value = 4></option>
-                            <option value = 5></option>
-                            <option value = 6></option>
+                        <select id="ospiti" class="ml">
+                            <option value="" disabled selected>Numero ospiti</option>
+                            <option value = "Nessuno">Nessuno</option>
+                            <option value = 1>1</option>
+                            <option value = 2>2</option>
+                            <option value = 3>3</option>
+                            <option value = 4>4</option>
+                            <option value = 5>5</option>
+                            <option value = 6>6</option>
                         </select>
                         <div id="guestlist"></div>
-                        <input placeholder="Note e messaggi per gli sposi">
-                        <input type="submit" value="Invia">
+                        <textarea rows="2" cols="58" placeholder="Altre note, allergie, messaggi per gli sposi?"></textarea>
+                        <br>
+                        <input type="submit" value="Invia" class="invia">
                     </form>
                 </div>
             </div>
@@ -66,9 +77,16 @@
             let guestlist = document.querySelector("#guestlist");
             guestlist.innerHTML = "";
             for (let i = 1; i <= ospiti; i++) {
-                guestlist.innerHTML = guestlist.innerHTML + `Ospite ${i} <input placeholder="Nome"></input>
+                guestlist.innerHTML = guestlist.innerHTML + `#${i} <input placeholder="Nome"></input>
                         <input placeholder="Cognome"></input>
-                        <input placeholder="Menù"></input><br> `
+                        <select>
+                            <option value="" disabled selected>Menù</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Vegetariano">Vegetariano</option>
+                            <option value="Vegano">Vegano</option>
+                            <option value="Senza lattosio">Senza lattosio</option>
+                            <option value="Senza glutine">Senza glutine</option>
+                        </select> <br>`
             }
         })
         let form = document.querySelector("#form");
