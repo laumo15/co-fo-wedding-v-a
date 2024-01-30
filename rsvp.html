@@ -64,6 +64,7 @@
         document.querySelector("#ospiti").addEventListener("change", function(e){
             let ospiti = e.target.value;
             let guestlist = document.querySelector("#guestlist");
+            guestlist.innerHTML = "";
             for (let i = 1; i <= ospiti; i++) {
                 guestlist.innerHTML = guestlist.innerHTML + `Ospite ${i} <input placeholder="Nome"></input>
                         <input placeholder="Cognome"></input>
