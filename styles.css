@@ -8,11 +8,16 @@
   src: url('Goodnight-London-Script.ttf'); 
 }
 
+@font-face {
+  font-family: 'Freight';
+  src: url('Freight-Big-Book.otf'); 
+}
+
 :root {
-    --default-font-family: 'GN-sans', sans-serif;
+    --default-font-family: 'Freight', sans-serif;
     --default-font-color: #440500;
     --headings-font-family: 'GN-script', serif;
-    --headings-font-color: #F2E8CF;
+    --headings-font-color: #440500;
     --pergamena-color: #E9E1DA;
     --pino-color: #92C1A0;
     --foglia-color: #B9C9B4;
@@ -131,14 +136,17 @@ footer .social-links a:hover {
     background-position-y: center;
     text-align: center;
     padding: 100px 20px;
+    margin-top: 40px;
 }
 
 .hero h1 {
     font-weight: 500;
+    color: var(--crema-color);
 }
 
 .hero h2{
-    font-family: var(--default-font-family);
+    font-family: "GN-sans";
+    color: var(--crema-color);
     font-size: 36px;
     font-weight: normal;
     line-height: 2.5;
@@ -150,16 +158,27 @@ footer .social-links a:hover {
     justify-content: space-evenly;
  }
 
- .buttons a {
+ /* .buttons a {
     color: var(--moro-color);
     text-decoration: none;
     font-size: 24px;
     font-weight: 500;
  }
-
- .buttons a:hover {
+ 
+  .buttons a:hover {
     text-decoration: overline;
     transition: ease-in-out 400ms;
+ }
+ */
+
+ .home-button {
+    font-size: 18px;
+    color: var(--moro-color);
+    background-color: var(--crema-color);
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: var(--moro-color) 1px 1px 1px;
  }
 
 .btn-branding {
@@ -190,13 +209,14 @@ footer .social-links a:hover {
 }
 
 .content-container h2 {
-    font-family: var(--default-font-family);
+    font-family: 'GN-sans';
     font-size: 18px;
     line-height: 27px;
 }
 
 .content {
     margin: 30px;
+    font-size: 22px;
 }
 
 .content h3 {
